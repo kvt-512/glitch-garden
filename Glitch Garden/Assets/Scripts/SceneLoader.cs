@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     int currentScene;
-    float timeToWait = 4F;
+    float timeToWait = 10F;
     // Start is called before the first frame update
     void Start()
     {
