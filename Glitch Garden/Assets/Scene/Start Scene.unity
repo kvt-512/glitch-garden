@@ -393,6 +393,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5692910134544194809, guid: 8bba72e9f307d844cb54a8febf3a59d9, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5692910134544194811, guid: 8bba72e9f307d844cb54a8febf3a59d9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
