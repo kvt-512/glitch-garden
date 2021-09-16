@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    [SerializeField] [Range(0,1)] float speed = 0.01F;
+    [SerializeField] [Range(0F, 1F)] float speed = 0.01F;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +14,6 @@ public class Attacker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       this.transform.position = new Vector3(
-           this.transform.position.x - speed,
-           this.transform.position.y,
-           this.transform.position.z
-           );
+       this.transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 }
