@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7352408134119781511}
   - component: {fileID: 7352408134119781509}
   - component: {fileID: 8723028451254388324}
+  - component: {fileID: 191563326}
   m_Layer: 0
   m_Name: Zucchini
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c77bb144b96c148ad1f4a75cc1d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 5
+  damage: 50
 --- !u!70 &8723028451254388324
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -110,6 +112,27 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025777936, y: 0.025777936}
-  m_Size: {x: 0.6115558, y: 0.6115558}
+  m_Offset: {x: 0.025777936, y: 0.041244686}
+  m_Size: {x: 0.6115558, y: 0.8384019}
   m_Direction: 0
+--- !u!50 &191563326
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7352408134119781510}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

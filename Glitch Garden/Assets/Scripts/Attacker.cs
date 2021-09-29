@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    [SerializeField] [Range(0F, 0.05F)] float currentSpeed;
-    [SerializeField] float startingHealth = 100;
+    [SerializeField] [Range(0F, 1F)] float currentSpeed;
     // Start is called before the first frame update
     void Start()
     {

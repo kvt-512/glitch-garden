@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] float startingHealth = 100F;
+    float noHealth = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,10 @@ public class Health : MonoBehaviour
         
     }
 
-    public float ReduceHealth(float health) {
-        return health -= 100;
+    public void DealDamage(float damage) {
+        startingHealth = startingHealth - damage;
+        if (startingHealth <= noHealth) {
+            Destroy(this.gameObject);
+        } 
     }
 }

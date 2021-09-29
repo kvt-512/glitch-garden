@@ -6,7 +6,7 @@ public class Spwaner : MonoBehaviour
 {
     bool spwan = true;
     float rangeMin = 1F;
-    float rangeMax = 5F;
+    float rangeMax = 10F;
     [SerializeField] Attacker attackerPrefab;
     // Start is called before the first frame update
     IEnumerator Start()
