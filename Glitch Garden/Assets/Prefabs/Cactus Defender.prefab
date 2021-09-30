@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zucchini: {fileID: 7352408134119781510, guid: a7048dd7e68ce04408ea43d02f743748, type: 3}
   firePoint: {fileID: 3795879469955707061}
+  projectileReleaseSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
