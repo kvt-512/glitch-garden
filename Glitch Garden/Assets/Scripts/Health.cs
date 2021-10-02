@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] float startingHealth = 100F;
     [SerializeField] GameObject explosionVFX;
     [SerializeField] AudioClip explosionSFX;
-    float explosionSFXVol = 1F;
     float destoryExplosionVFXDelay = 1F;
     float noHealth = 0;
     // Start is called before the first frame update
@@ -38,6 +36,6 @@ public class Health : MonoBehaviour
     }
 
     private void TriggerExplosionSFX() {
-        AudioSource.PlayClipAtPoint(explosionSFX, Camera.main.transform.position, explosionSFXVol);
+        AudioSource.PlayClipAtPoint(explosionSFX, this.transform.position);
     }
 }
