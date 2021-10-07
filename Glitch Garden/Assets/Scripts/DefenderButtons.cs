@@ -4,27 +4,14 @@ using UnityEngine;
 
 public class DefenderButtons : MonoBehaviour
 {
-    [SerializeField] bool isWhite = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    [SerializeField] Defender deferderPrefab;
     private void OnMouseDown() {
-        if(!isWhite) {
-            this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-            isWhite = true;
+        var buttons = FindObjectsOfType<DefenderButtons>();
+        foreach(DefenderButtons button in buttons) {
+            button.GetComponent<SpriteRenderer>().color = new Color(0.3F, 0.3F, 0.3F, 1);
         }
-        else if(isWhite) {
-            this.GetComponent<SpriteRenderer>().color = new Color(0.3F, 0.3F, 0.3F, 1);
-            isWhite = false;
-        }
+
+        GetComponent<SpriteRenderer>().color = Color.white;
+        FindObjectOfType<DefenderSpwaner>().SetSelectDefender(deferderPrefab);
     }
 }

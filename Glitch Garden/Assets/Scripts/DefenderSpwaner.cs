@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameArea : MonoBehaviour
+public class DefenderSpwaner : MonoBehaviour
 {
     Vector3 mousePosition;
     Vector3 gridPosition;
     int mousePositionZ = 0;
-    [SerializeField] GameObject defender;
+    [SerializeField] Defender defender;
     private void OnMouseDown() {
         SpwanDefenders(MouseToGirdPosition(GetMousePosition()));
+    }
+
+    public void SetSelectDefender(Defender defenderToSelect) {
+        defender = defenderToSelect;
     }
 
     private Vector3 GetMousePosition() {
@@ -28,6 +32,6 @@ public class GameArea : MonoBehaviour
     }
 
     private void SpwanDefenders(Vector3 gridPosition) {
-        GameObject defenderGameObject = Instantiate(defender, gridPosition, Quaternion.identity) as GameObject;
+        Defender defenderGameObject = Instantiate(defender, gridPosition, Quaternion.identity) as Defender;
     }
 }
